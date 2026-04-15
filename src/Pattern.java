@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Pattern {
-
     public static void pattern1(){
         System.out.println("Pattern1");
         for(int i=0; i<4; i++){
@@ -164,6 +163,77 @@ public class Pattern {
         }
     }
 
+    public static void pattern11(int n){
+        System.out.println("Pattern 11");
+        int spaces = 2*(n-1);
+        for(int i=1; i<=n; i++){
+
+            // numbers
+            for(int j=1; j<=i; j++){
+                System.out.print(j);
+            }
+
+
+            // spaces
+            for(int j=1; j<=spaces; j++){
+                System.out.print(" ");
+
+            }
+
+
+            // numbers
+            for(int j=i; j>=1; j--){
+                System.out.print(j);
+            }
+
+            System.out.println();
+
+            spaces = spaces - 2;
+
+
+        }
+    }
+
+    public static void pattern12(int n){
+        System.out.println("Pattern 12");
+        int num = 1;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print(num);
+                num += 1;
+            }
+
+            System.out.println();
+        }
+
+    }
+
+    public static void pattern13(int n){
+        System.out.println("Pattern 13");
+
+        for(int i=1; i<=n; i++){
+            for(char j = 'A'; j < 'A' + i; j++){
+                System.out.print(j + " ");
+
+//                ch = (char)(ch + 1);
+
+            }
+            System.out.println();
+
+        }
+    }
+
+    public static void pattern14(int n){
+        System.out.println("Pattern 14");
+        for(int i=n; i>=1; i--){
+            for(char j = 'A'; j<'A'+ i; j++){
+                System.out.print(j + " ");
+            }
+
+            System.out.println();
+        }
+
+    }
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);
@@ -180,6 +250,10 @@ public class Pattern {
         pattern8(n);
         pattern9(n);
         pattern10(n);
+        pattern11(n);
+        pattern12(n);
+        pattern13(n);
+        pattern14(n);
 
     }
 }
