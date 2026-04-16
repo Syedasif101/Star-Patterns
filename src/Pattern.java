@@ -234,6 +234,72 @@ public class Pattern {
         }
 
     }
+
+    public static void pattern15(int n){
+        System.out.println("Pattern 15");
+        char ch = 'A';
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+
+                System.out.print(ch);
+
+
+            }
+            System.out.println();
+            ch = (char) (ch + 1);
+        }
+    }
+
+
+    public static void pattern16(int n){
+
+        System.out.println("Pattern 16");
+        for(int i=1; i<=n; i++){
+
+            // spaces
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+
+            // letters
+            char ch = 'A';
+            int breakPoint = (2 * i - 1) / 2;
+            for(int j=1; j<=2 * i - 1; j++){
+                System.out.print(ch);
+                if(j <= breakPoint){
+                    ch++;
+                } else {
+                    ch--;
+                }
+
+            }
+
+            // spaces
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+
+            System.out.println();
+        }
+    }
+
+    public static void pattern17(int n){
+
+//
+        System.out.println("Pattern 17");
+
+        for(int i=0; i<n; i++){
+            for(char ch = (char) ('E' - i); ch <= 'E'; ch++)
+            {
+                System.out.print(ch);
+
+            }
+
+            System.out.println();
+        }
+
+
+    }
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);
@@ -254,6 +320,9 @@ public class Pattern {
         pattern12(n);
         pattern13(n);
         pattern14(n);
+        pattern15(n);
+        pattern16(n);
+        pattern17(n);
 
     }
 }
