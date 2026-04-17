@@ -297,8 +297,52 @@ public class Pattern {
 
             System.out.println();
         }
+    }
+
+    public static void pattern18(int n){
+        System.out.println("Pattern 18");
+        for(int i=0; i<n; i++){
+            // stars
+            for(int j = 0; j<n-i; j++){
+                System.out.print("*");
+            }
 
 
+
+            // spaces
+            for(int j=0; j<2*i; j++){
+                System.out.print(" ");
+            }
+
+
+            // stars
+            for(int j = 0; j<n-i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        int spaces = 2 * n - 2;
+        for(int i=0; i<n; i++){
+            // stars
+            for(int j = 0; j < i + 1; j++){
+                System.out.print("*");
+            }
+
+            // spaces
+            for(int j=0; j<spaces; j++){
+                System.out.print(" ");
+
+            }
+
+
+
+            // stars
+            for(int j = 0; j<i + 1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+            spaces = spaces - 2;
+        }
     }
     public static void main(String[] args){
 
@@ -323,6 +367,7 @@ public class Pattern {
         pattern15(n);
         pattern16(n);
         pattern17(n);
+        pattern18(n);
 
     }
 }
